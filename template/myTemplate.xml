@@ -1105,7 +1105,7 @@ No response to &#8220;<data:post.title/>&#8221;
 Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;'>Comments</a> <img class='feed-icon2' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>
 </div></div>
         <b:section class='sidebar' id='sidebar' preferred='yes'>
-<b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+<b:widget id='AdSense2' locked='false' title='' type='AdSense'>
 <b:includable id='main'>
 <center>
   <div class='widget-content'>
@@ -1224,7 +1224,7 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
   <b:include name='quickedit'/>
 </b:includable>
 </b:widget>
-<b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+<b:widget id='AdSense1' locked='false' title='' type='AdSense'>
 <b:includable id='main'>
 <center>
   <div class='widget-content'>
