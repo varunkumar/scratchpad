@@ -147,20 +147,20 @@ a img {
 }
 #navigation a:hover{
  text-decoration:none;
- background: url(http://varun-store.appspot.com/images/zipqut.jpg) bottom center no-repeat;
+ background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/zipqut.jpg) bottom center no-repeat;
 }
 
 #featured {
  color:#fff;
  height:185px;
- background: url(http://varun-store.appspot.com/images/2vmzf4g.jpg) repeat-x;
+ background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2vmzf4g.jpg) repeat-x;
 }
 #featured-wrap{
   width:100%;
   height:185px;
   margin:0 auto;
   overflow:hidden;
-  background:url(http://varun-store.appspot.com/images/2vmzf4g.jpg) repeat-x;
+  background:url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2vmzf4g.jpg) repeat-x;
 }
 #featured-twitter{
  height:175px;
@@ -191,7 +191,7 @@ a img {
   text-transform:capitalize;
 }
 #wishes{
-  width:320px;
+  width:580px;
   border: solid 1px #CCCCCC;
 }
 #searchbox{
@@ -200,7 +200,7 @@ a img {
   display:inline;
   float:right;
   width:300px;
-  background: url(http://varun-store.appspot.com/images/2qvawdg.jpg) repeat-x;
+  background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2qvawdg.jpg) repeat-x;
   height:31px;
 }
 #searchbox form{margin:0;padding:0;}
@@ -236,7 +236,7 @@ a img {
   overflow:hidden;
   border-left:1px solid #DDDDDD;
   border-right:1px solid #DDDDDD;
-  background:url(http://varun-store.appspot.com/static/tile_left.gif) repeat-y;
+  background:url(http://varun-scratchpad.googlecode.com/svn/trunk/static/tile_left.gif) repeat-y;
 }
 
 #sidebar-wrapper {
@@ -299,7 +299,7 @@ a img {
 
 /* Posts
 -----------------------------------------------
-background:transparent url(http://varun-store.appspot.com/static/date_icon.gif) no-repeat scroll left 50%;
+background:transparent url(http://varun-scratchpad.googlecode.com/svn/trunk/static/date_icon.gif) no-repeat scroll left 50%;
  */
 h2.date-header {
   color:#777777;
@@ -474,7 +474,7 @@ h4#resp{padding:0;margin:10px 0;}
 ----------------------------------------------- */
 #footer-wrapper{
   height:236px;margin:0;padding:0;
-  background: url(http://varun-store.appspot.com/images/2a7sq6q.jpg) top left repeat-x;
+  background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2a7sq6q.jpg) top left repeat-x;
 }
 #footer-inner {
   width:98%;           
@@ -483,7 +483,7 @@ h4#resp{padding:0;margin:10px 0;}
   padding:15px 10px 0 10px;
   height:221px;
   overflow:hidden;
-  background: url(http://varun-store.appspot.com/images/2a7sq6q.jpg) top left repeat-x;
+  background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2a7sq6q.jpg) top left repeat-x;
 }
 #ft1{width:100%;float:left;}
 #ft2{margin-left:25px;display:inline;width:290px;float:left;}
@@ -557,7 +557,7 @@ body#layout #footer-wrapper{height:auto;}
 <style type='text/css'>
 #navigation a.selected{
  text-decoration:none;
- background: url(http://varun-store.appspot.com/images/zipqut.jpg) bottom center no-repeat;
+ background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/zipqut.jpg) bottom center no-repeat;
 }
 #navigation a{
  text-decoration:none;
@@ -647,7 +647,7 @@ body#layout #footer-wrapper{height:auto;}
     <div id='featured-about'>
         <table style='border: 0px none ; width: 99%;'>
             <tr>
-                <td><img src='http://varun-store.appspot.com/images/Varun.JPG' style='width:150px;height:150px;padding: 5px;border: 1px solid #777777' tag='Author'/></td>
+                <td><img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/Varun.JPG' style='width:150px;height:150px;padding: 5px;border: 1px solid #777777' tag='Author'/></td>
                 <td style='text-align:justify;padding-left:10px'><b>Varunkumar Nagarajan</b>, the author of this blog, is a Software Engineer currently employed with <a href='http://www.deshaw.com'>D.E.Shaw &amp; Co., Hyderabad</a>. Varun completed his Five Years Integrated M.Sc (Software Engineering) programme from <a href='http://www.psgtech.edu'>P.S.G. College of Technology, Coimbatore</a>. He has worked for <a href='http://www.intel.com'>Intel Technology India Pvt. Ltd.</a> and <a href='http://www.interchainsol.com/'>Interchain Solutions</a> as an intern. A programmer by choice. He loves programming and started blogging on Aug-2006. From then, he became socially active on internet.<br/><br/>
                 Other than programming, Varun is very much passionate about cricket. A die-hard fan of <a href='http://en.wikipedia.org/wiki/Rahul_Dravid'>Rahul Dravid</a>. His hobbies include creating flash animations, developing games, etc.<br/><br/>
                 Contact <a href='javascript:show(&quot;contact&quot;);'>Varun</a></td>
@@ -684,7 +684,7 @@ body#layout #footer-wrapper{height:auto;}
 <div class='hide' id='searchbox'>
 <form action='/search' id='search_form' method='get'>
 <input id='s' name='q' type='text'/>
-<input alt='Search' height='32' id='go' src='http://varun-store.appspot.com/images/2hd8p3o.jpg' title='Search' type='image' width='72'/>
+<input alt='Search' height='32' id='go' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2hd8p3o.jpg' title='Search' type='image' width='72'/>
 </form>
 </div><!-- end searchbox -->
 <div class='clear'/>
@@ -697,9 +697,8 @@ body#layout #footer-wrapper{height:auto;}
       </div>
 
       <div id='main-wrapper'>
-<!--center><div class='hide' id='wishes'><table><tbody><tr><td width='10%'><img id='imgWishes' src='http://varun-store.appspot.com/images/xmas-11.png'/></td><td width='90%'>
-Wishing you and your family a merry Christmas and a prosperous New Year!! :-)</td></tr></tbody></table>
-</div><script>function changeImage() { var randomnumber=Math.floor(Math.random()*19) + 1; var imgId=11; if (randomnumber&lt; 10) imgId = &quot;0&quot; + randomnumber; else imgId = randomnumber; document.getElementById(&#39;imgWishes&#39;).src=&quot;http://varun-store.appspot.com/images/xmas-&quot; + imgId + &quot;.png&quot;;setTimeout(&quot;changeImage()&quot;,1000 * 20);} changeImage();</script></center-->
+<center><div class='hide' id='wishes'><table><tbody><tr><td width='10%'><img id='imgWishes' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/holi-01.jpg'/></td><td width='90%'>May the festival of colors bring brightness of colors to your life!! Happy Holi!! :-)</td></tr></tbody></table>
+</div><script>function changeImage() { var randomnumber=Math.floor(Math.random()*2) + 1; var imgId=11; if (randomnumber&lt; 10) imgId = &quot;0&quot; + randomnumber; else imgId = randomnumber; document.getElementById(&#39;imgWishes&#39;).src=&quot;http://varun-scratchpad.googlecode.com/svn/trunk/images/holi-&quot; + imgId + &quot;.jpg&quot;;setTimeout(&quot;changeImage()&quot;,1000 * 20);} //changeImage();</script></center>
         <b:section class='main' id='main' showaddelement='no'>
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
 <b:includable id='nextprev'>
@@ -798,9 +797,9 @@ Wishing you and your family a merry Christmas and a prosperous New Year!! :-)</t
         <b:if cond='data:post.emailPostUrl'>
           <span class='item-action'>
           <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
-              <img alt='' class='icon-action' height='13' src='http://varun-store.appspot.com/images/icon18_email.gif' style='padding:0px' width='18'/>          </a>
-          <a expr:href='&quot;http://twitter.com/home?status=&quot; + data:post.title + &quot; - &quot; + data:post.url + &quot; by @varunkumar&quot;' target='_blank' title='Share in Twitter'><img class='icon-action' src='http://varun-store.appspot.com/images/icon_twitter.png' style='padding:0px'/></a>
-          <a expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank' title='Share in Facebook'><img class='icon-action' src='http://varun-store.appspot.com/images/icon_fb.png' style='padding:0px'/></a>
+              <img alt='' class='icon-action' height='13' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon18_email.gif' style='padding:0px' width='18'/>          </a>
+          <a expr:href='&quot;http://twitter.com/home?status=&quot; + data:post.title + &quot; - &quot; + data:post.url + &quot; by @varunkumar&quot;' target='_blank' title='Share in Twitter'><img class='icon-action' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_twitter.png' style='padding:0px'/></a>
+          <a expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank' title='Share in Facebook'><img class='icon-action' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_fb.png' style='padding:0px'/></a>
           </span>
         </b:if>
 
@@ -830,7 +829,7 @@ Wishing you and your family a merry Christmas and a prosperous New Year!! :-)</t
 <b:includable id='commentDeleteIcon' var='comment'>
   <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
     <a expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-      <img src='http://varun-store.appspot.com/images/icon_delete13.gif'/>
+      <img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_delete13.gif'/>
     </a>
   </span>
 </b:includable>
@@ -882,7 +881,7 @@ Wishing you and your family a merry Christmas and a prosperous New Year!! :-)</t
 <b:includable id='backlinkDeleteIcon' var='backlink'>
   <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
     <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
-      <img src='http://varun-store.appspot.com/images/icon_delete13.gif'/>
+      <img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_delete13.gif'/>
     </a>
   </span>
 </b:includable>
@@ -891,11 +890,11 @@ Wishing you and your family a merry Christmas and a prosperous New Year!! :-)</t
 
 <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Post feed links -->
 
-   <img class='feed-icons' src='http://varun-store.appspot.com/images/2vtquz5.jpg'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+   <img class='feed-icons' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
 
 <b:else/> <!-- Comments feed links -->
 
-   <img class='feed-icons' src='http://varun-store.appspot.com/images/2vtquz5.jpg'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>Comments (<data:f.feedType/>)</a>
+   <img class='feed-icons' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>Comments (<data:f.feedType/>)</a>
 
 </b:if>
   </b:loop>
@@ -904,7 +903,7 @@ Wishing you and your family a merry Christmas and a prosperous New Year!! :-)</t
   <b:if cond='data:post.editUrl'>
     <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
       <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-        <img alt='' class='icon-action' height='18' src='http://varun-store.appspot.com/images/icon18_edit_allbkg.gif' width='18'/>
+        <img alt='' class='icon-action' height='18' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon18_edit_allbkg.gif' width='18'/>
       </a>
     </span>
   </b:if>
@@ -1103,7 +1102,7 @@ No response to &#8220;<data:post.title/>&#8221;
       <div id='sidebar-wrapper'>
 <div class='hide' id='feedlnks'>
 <div id='feed-links'>
-Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;'>Comments</a> <img class='feed-icon2' src='http://varun-store.appspot.com/images/2vtquz5.jpg'/>
+Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;'>Comments</a> <img class='feed-icon2' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>
 </div></div>
         <b:section class='sidebar' id='sidebar' preferred='yes'>
 <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
