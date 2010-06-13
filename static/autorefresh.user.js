@@ -1,8 +1,11 @@
 // ==UserScript==
 // @name           AutoRefresh
 // @namespace      http://varunkumar-n.blogspot.com
-// @description    AutoRefreshes the page every 5 mins
+// @description    Keeps the IRCTC session alive
 // @include        https://www.irctc.co.in/*
+// @include        http://www.irctc.co.in/*
+// @include        https://irctc.co.in/*
+// @include        http://irctc.co.in/*
 // ==/UserScript==
 
-setTimeout("window.location.reload(true)", 10 * 1000);
+setTimeout("var link = document.getElementById('menu0a7f0p0i17lnk');if (link != null)window.location = link.href;", 60 * 1000);
