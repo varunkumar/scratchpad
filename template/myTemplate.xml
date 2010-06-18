@@ -4,9 +4,10 @@
   <head>
 <!--meta content='chrome=1' http-equiv='X-UA-Compatible'/-->
 <meta content='yfCcMkRpNYzasYCikO6sL+NaycgEvTelaiGFQYedDWA=' name='verify-v1'/>
-<link href='http://vcomment.appspot.com/css/overlay.css' rel='stylesheet' type='text/css'/> 
+<meta content='18742DCEC832E52458981FDC6D48EC7B' name='msvalidate.01'/>
 <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAD5RR7ltUjKKkgTWImFEE-RQjAygp3ezSO8khVcYtNmWB6dkH0hQxF6GcK3-ULpBzIjxyzb5J62WE9A' type='text/javascript'/>
 <script src='http://varun-stats.appspot.com/'/>
+<script>function show(d){var e=document.getElementById(&quot;divHome&quot;),b=document.getElementById(&quot;divAbout&quot;),g=document.getElementById(&quot;divContact&quot;),h=document.getElementById(&quot;aHome&quot;),f=document.getElementById(&quot;aAbout&quot;),j=document.getElementById(&quot;aContact&quot;);if(d==null||d==&quot;home&quot;){h.setAttribute(&quot;class&quot;,&quot;selected&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;block&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;none&quot;;<b:if cond='data:blog.url != data:blog.homepageUrl'>window.location=/&quot;;</b:if>}else if(d==&quot;about&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;selected&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;block&quot;;g.style.display=&quot;none&quot;}else if(d==&quot;contact&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;selected&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;block&quot;}}</script>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <b:skin><![CDATA[
@@ -201,7 +202,6 @@ a img {
   float:right;
   width:300px;
   background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2qvawdg.jpg) repeat-x;
-  height:31px;
 }
 #searchbox form{margin:0;padding:0;}
 #s{
@@ -470,101 +470,22 @@ h4#resp{padding:0;margin:10px 0;}
   letter-spacing: .1em;
 }
 
-/* Footer
------------------------------------------------ */
-#footer-wrapper{
-  height:236px;margin:0;padding:0;
-  background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2a7sq6q.jpg) top left repeat-x;
-}
-#footer-inner {
-  width:98%;           
-  clear:both;
-  margin:0 auto;
-  padding:15px 10px 0 10px;
-  height:221px;
-  overflow:hidden;
-  background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/2a7sq6q.jpg) top left repeat-x;
-}
-#ft1{width:100%;float:left;}
-#ft2{margin-left:25px;display:inline;width:290px;float:left;}
-#ft3{width:290px;float:right;}
-.footer h2{color:#fff;font-size:18px;margin:0 0 5px;padding:0;}
-.footer,.footer a,.footer a:visited,.footer a:hover{color:#fff;}
-.footer ul {
-  list-style:none;
-  margin:0 0 0;
-  padding:0 0 0;
-}
-.footer li {
-  margin:5px 0;
-  padding:5px 0 5px 10px;
-  line-height:1.5em;
-}
-#credits,#credits a,#credits a:visited,#credits a:hover{color:#fff;}
-#credits{
- background:#12191f;
- font-size:11px;
- margin:0 auto;
- width:100%;
- padding:0;
-}
 #cwrap{background:#12191f;margin:0;padding:0;} 
-
-/* Label Cloud Styles
------------------------------------------------ */
-#labelCloud {text-align:center;font-family:arial,sans-serif;}
-#labelCloud .label-cloud li{display:inline;background-image:none !important;padding:0 5px;margin:0;vertical-align:baseline !important;border:0 !important;}
-#labelCloud ul{list-style-type:none;margin:0 auto;padding:0;}
-#labelCloud a img{border:0;display:inline;margin:0 0 0 3px;padding:0}
-#labelCloud a{text-decoration:underline;color:#6699CC;}
-#labelCloud a:hover{text-decoration:underline;color:#669933;}
-#labelCloud li a{}
-#labelCloud .label-cloud {}
-#labelCloud .label-count {padding-left:0.2em;font-size:9px;color:#000}
-#labelCloud .label-cloud li:before{content:"" !important} 
-
-/* Label Cloud Styles
------------------------------------------------ */
-#labelCloud1 {text-align:center;font-family:arial,sans-serif;}
-#labelCloud1 .label-cloud li{display:inline;background-image:none !important;padding:0 5px;margin:0;vertical-align:baseline !important;border:0 !important;}
-#labelCloud1 ul{list-style-type:none;margin:0 auto;padding:0;}
-#labelCloud1 a img{border:0;display:inline;margin:0 0 0 3px;padding:0}
-#labelCloud1 a{text-decoration:underline;color:#6699CC;}
-#labelCloud1 a:hover{text-decoration:underline;color:#669933;}
-#labelCloud1 li a{}
-#labelCloud1 .label-cloud {}
-#labelCloud1 .label-count {padding-left:0.2em;font-size:9px;color:#000}
-#labelCloud1 .label-cloud li:before{content:"" !important} 
-
 
 /* layout tweaks for the page element tab  */
 body#layout,
 body#layout #header-wrapper,
 body#layout #navigation,
 body#layout #content-wrapper,
-body#layout #footer-inner,
 body#layout #featured-wrap{width:800px;}
 body#layout #main-wrapper{width:450px;}
 body#layout #ft1,body#layout #ft2,body#layout #ft3{width:250px;}
-body#layout #footer-inner{padding:0;}
 body#layout .hide{display:none;}
 body#layout #featured{height:60px;}
-body#layout #featured-wrap,
-body#layout #footer-inner,
-body#layout #footer-wrapper{height:auto;}
-]]></b:skin>
-<script type='text/javascript'>var cloudMin=1,maxFontSize=25,maxColor=[0,0,255],minFontSize=12,minColor=[0,0,0],lcShowCount=false;</script> 
-<style type='text/css'>
-#navigation a.selected{
- text-decoration:none;
- background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/zipqut.jpg) bottom center no-repeat;
-}
-#navigation a{
- text-decoration:none;
-}
-</style>
-<script>function show(d){var e=document.getElementById(&quot;divTwitter&quot;),b=document.getElementById(&quot;divAbout&quot;),g=document.getElementById(&quot;divContact&quot;),h=document.getElementById(&quot;aTwitter&quot;),f=document.getElementById(&quot;aAbout&quot;),j=document.getElementById(&quot;aContact&quot;);if(d==null||d==&quot;home&quot;){h.setAttribute(&quot;class&quot;,&quot;selected&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;block&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;none&quot;;<b:if cond='data:blog.url != data:blog.homepageUrl'>window.location=/&quot;;</b:if>}else if(d==&quot;about&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;selected&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;block&quot;;g.style.display=&quot;none&quot;}else if(d==&quot;contact&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;selected&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;block&quot;}}</script>
-  </head>
+#navigation a.selected{ text-decoration:none;background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/zipqut.jpg) bottom center no-repeat;}
+#navigation a{text-decoration:none;}
+#twitter_update_list li {padding-top: 5px;}
+]]></b:skin></head>
 
   <body>
 
@@ -589,7 +510,6 @@ body#layout #footer-wrapper{height:auto;}
 <b:includable id='description'>
 
    <div id='description'><data:description/></div>
-
 </b:includable>
 <b:includable id='main'>
 
@@ -606,10 +526,10 @@ body#layout #footer-wrapper{height:auto;}
 <div id='navigation'>
 <ul>
 <b:if cond='data:blog.url == data:blog.homepageUrl'>
-    <li><a class='selected' href='javascript:show(&quot;home&quot;);' id='aTwitter'>Home</a></li>
+    <li><a class='selected' href='javascript:show(&quot;home&quot;);' id='aHome'>Home</a></li>
 </b:if> 
 <b:if cond='data:blog.url != data:blog.homepageUrl'>
-    <li><a href='javascript:show(&quot;home&quot;);' id='aTwitter'>Home</a></li>
+    <li><a href='javascript:show(&quot;home&quot;);' id='aHome'>Home</a></li>
 </b:if> 
 <li><a href='javascript:show(&quot;about&quot;);' id='aAbout'>About</a></li>
 <li><a href='javascript:show(&quot;contact&quot;);' id='aContact'>Contact</a></li>
@@ -626,9 +546,9 @@ body#layout #footer-wrapper{height:auto;}
 
 <div id='featured'>
 <div id='featured-wrap'>
-<div id='divTwitter'>
+<div id='divHome'>
 <b:section id='featured-twitter' maxwidgets='1'>
-<b:widget id='HTML3' locked='false' title='' type='HTML'>
+<b:widget id='HTML2' locked='false' title='' type='HTML'>
 <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -682,10 +602,31 @@ body#layout #footer-wrapper{height:auto;}
     </div>
 </div>
 <div class='hide' id='searchbox'>
-<form action='/search' id='search_form' method='get'>
+<!--form action='/search' id='search_form' method='get'>
 <input id='s' name='q' type='text'/>
 <input alt='Search' height='32' id='go' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2hd8p3o.jpg' title='Search' type='image' width='72'/>
+</form-->
+
+<script src='http://www.google.com/jsapi' type='text/javascript'/>
+<script type='text/javascript'>
+  google.load(&#39;search&#39;, &#39;1&#39;);
+  google.setOnLoadCallback(function() {
+    google.search.CustomSearchControl.attachAutoCompletion(
+      &#39;partner-pub-4711531188922528:zm7p7yo1oho&#39;,
+      document.getElementById(&#39;q&#39;),
+      &#39;cse-search-box&#39;);
+  });
+</script>
+<form action='http://www.google.co.in/cse' id='cse-search-box' target='_blank'>
+  <div>
+    <input name='cx' type='hidden' value='partner-pub-4711531188922528:zm7p7yo1oho'/>
+    <input name='ie' type='hidden' value='ISO-8859-1'/>
+    <input autocomplete='off' id='q' name='q' size='31' style='height:26;' type='text'/>
+<input alt='Search' height='24' id='go' name='sa' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/search.jpg' title='Search' type='image' width='72'/>
+
+  </div>
 </form>
+<script src='http://www.google.co.in/cse/brand?form=cse-search-box&amp;lang=en' type='text/javascript'/>
 </div><!-- end searchbox -->
 <div class='clear'/>
 </div><!-- featured-wrap -->
@@ -697,8 +638,8 @@ body#layout #footer-wrapper{height:auto;}
       </div>
 
       <div id='main-wrapper'>
-<center><div class='hide' id='wishes'><table><tbody><tr><td width='10%'><img id='imgWishes' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/holi-01.jpg'/></td><td width='90%'>May the festival of colors bring brightness of colors to your life!! Happy Holi!! :-)</td></tr></tbody></table>
-</div><script>function changeImage() { var randomnumber=Math.floor(Math.random()*2) + 1; var imgId=11; if (randomnumber&lt; 10) imgId = &quot;0&quot; + randomnumber; else imgId = randomnumber; document.getElementById(&#39;imgWishes&#39;).src=&quot;http://varun-scratchpad.googlecode.com/svn/trunk/images/holi-&quot; + imgId + &quot;.jpg&quot;;setTimeout(&quot;changeImage()&quot;,1000 * 20);} //changeImage();</script></center>
+<!--center><div class='hide' id='wishes'><table><tbody><tr><td width='10%'><img id='imgWishes' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/holi-01.jpg'/></td><td width='90%'>May the festival of colors bring brightness of colors to your life!! Happy Holi!! :-)</td></tr></tbody></table>
+</div><script>function changeImage() { var randomnumber=Math.floor(Math.random()*2) + 1; var imgId=11; if (randomnumber&lt; 10) imgId = &quot;0&quot; + randomnumber; else imgId = randomnumber; document.getElementById(&#39;imgWishes&#39;).src=&quot;http://varun-scratchpad.googlecode.com/svn/trunk/images/holi-&quot; + imgId + &quot;.jpg&quot;;setTimeout(&quot;changeImage()&quot;,1000 * 20);} //changeImage();</script></center-->
         <b:section class='main' id='main' showaddelement='no'>
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
 <b:includable id='nextprev'>
@@ -719,6 +660,20 @@ body#layout #footer-wrapper{height:auto;}
 
   </div>
   <div class='clear'/>
+</b:includable>
+<b:includable id='shareButtons' var='post'>
+  <b:if cond='data:post.sharePostUrl'>
+      <a class='share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.emailThisMsg/></span></a>
+      <a class='share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.blogThisMsg/></span></a>
+      <a class='share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a>
+      <a class='share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a>
+      <a class='share-button sb-buzz' expr:href='data:post.sharePostUrl + &quot;&amp;target=buzz&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=415,width=690\&quot;); return false;&quot;' expr:title='data:top.shareToBuzzMsg' target='_blank'>
+        <span class='share-button-link-text'><data:top.shareToBuzzMsg/></span></a>
+  </b:if>
 </b:includable>
 <b:includable id='backlinks' var='post'>
   <a name='links'/><h4>Trackbacks</h4>
@@ -790,16 +745,14 @@ body#layout #footer-wrapper{height:auto;}
           <b:if cond='data:post.allowComments'>
             <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><b:if cond='data:post.numComments == 1'>1 comment<b:else/><b:if cond='data:post.numComments == 0'>0 comments<b:else/><data:post.numComments/> <data:top.commentLabelPlural/></b:if></b:if></a>          </b:if>
         </b:if>
-        <b:if cond='data:post.allowComments'> | <b><a href='javascript:void(0)' onclick='javascript:vcomment_init(this)'>VComment</a><input expr:value='data:post.url' id='v_post' type='hidden'/><span style='display:none'><data:post.title/></span></b>
-        </b:if>
       </span> <span class='post-icons'>
         <!-- email post links -->
         <b:if cond='data:post.emailPostUrl'>
           <span class='item-action'>
           <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
               <img alt='' class='icon-action' height='13' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon18_email.gif' style='padding:0px' width='18'/>          </a>
-          <a expr:href='&quot;http://twitter.com/home?status=&quot; + data:post.title + &quot; - &quot; + data:post.url + &quot; by @varunkumar&quot;' target='_blank' title='Share in Twitter'><img class='icon-action' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_twitter.png' style='padding:0px'/></a>
-          <a expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank' title='Share in Facebook'><img class='icon-action' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_fb.png' style='padding:0px'/></a>
+          <a expr:href='&quot;http://twitter.com/home?status=&quot; + data:post.title + &quot; - &quot; + data:post.url + &quot; by @varunkumar&quot;' target='_blank' title='Share in Twitter'><img class='icon-action' height='17' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_twitter.png' style='padding:0px' width='17'/></a>
+          <a expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank' title='Share in Facebook'><img class='icon-action' height='17' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_fb.png' style='padding:0px' width='17'/></a>
           </span>
         </b:if>
 
@@ -826,13 +779,6 @@ body#layout #footer-wrapper{height:auto;}
     </div>
   </div>
 </b:includable>
-<b:includable id='commentDeleteIcon' var='comment'>
-  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
-    <a expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-      <img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_delete13.gif'/>
-    </a>
-  </span>
-</b:includable>
 <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
   <div class='status-msg-wrap'>
@@ -847,6 +793,61 @@ body#layout #footer-wrapper{height:auto;}
   </div>
   <div style='clear: both;'/>
   </b:if>
+</b:includable>
+<b:includable id='comment-form' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <h4 id='comment-post-message'>Leave a reply</h4>
+    <p><data:blogCommentMessage/></p>
+    <data:blogTeamBlogMessage/>
+    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+    <iframe allowtransparency='true' class='blogger-iframe-colorize' frameborder='0' height='275' id='comment-editor' scrolling='no' src='' width='100%'/>
+    <data:post.iframeColorizer/>
+  </div>
+</b:includable>
+<b:includable id='backlinkDeleteIcon' var='backlink'>
+  
+</b:includable>
+<b:includable id='postQuickEdit' var='post'>
+  
+</b:includable>
+<b:includable id='main' var='top'>
+  <!-- posts -->
+  <div class='blog-posts hfeed'>
+
+    <b:include data='top' name='status-message'/>
+
+    <data:adStart/>
+    <b:loop values='data:posts' var='post'>
+      <b:include data='post' name='post'/>
+      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <b:include data='post' name='comments'/>
+      </b:if>
+
+      <b:if cond='data:post.includeAd'>
+        <data:adEnd/>
+        <data:adCode/>
+        <data:adStart/>
+      </b:if>
+      <b:if cond='data:post.trackLatency'>
+        <data:post.latencyJs/>
+      </b:if>
+    </b:loop>
+    <data:adEnd/>
+  </div>
+
+<b:if cond='data:blog.pageType != &quot;item&quot;'>
+  <!-- navigation -->
+  <b:include name='nextprev'/>
+</b:if>
+
+</b:includable>
+<b:includable id='commentDeleteIcon' var='comment'>
+  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+    <a expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+      <img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_delete13.gif'/>
+    </a>
+  </span>
 </b:includable>
 <b:includable id='feedLinks'>
     <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Post feed links -->
@@ -867,46 +868,19 @@ body#layout #footer-wrapper{height:auto;}
       </b:loop>
   </b:if>
 </b:includable>
-<b:includable id='comment-form' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <h4 id='comment-post-message'>Leave a reply</h4>
-    <p><data:blogCommentMessage/></p>
-    <data:blogTeamBlogMessage/>
-    <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-    <iframe allowtransparency='true' class='blogger-iframe-colorize' frameborder='0' height='275' id='comment-editor' scrolling='no' src='' width='100%'/>
-    <data:post.iframeColorizer/>
-  </div>
-</b:includable>
-<b:includable id='backlinkDeleteIcon' var='backlink'>
-  <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
-    <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
-      <img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon_delete13.gif'/>
-    </a>
-  </span>
-</b:includable>
 <b:includable id='feedLinksBody' var='links'>
   <b:loop values='data:links' var='f'>
 
 <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Post feed links -->
 
-   <img class='feed-icons' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+   <img class='feed-icons' height='15' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg' width='15'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
 
 <b:else/> <!-- Comments feed links -->
 
-   <img class='feed-icons' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>Comments (<data:f.feedType/>)</a>
+   <img class='feed-icons' height='15' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg' width='15'/>  <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>Comments (<data:f.feedType/>)</a>
 
 </b:if>
   </b:loop>
-</b:includable>
-<b:includable id='postQuickEdit' var='post'>
-  <b:if cond='data:post.editUrl'>
-    <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
-      <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-        <img alt='' class='icon-action' height='18' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/icon18_edit_allbkg.gif' width='18'/>
-      </a>
-    </span>
-  </b:if>
 </b:includable>
 <b:includable id='comments' var='post'>
 
@@ -928,7 +902,7 @@ No response to &#8220;<data:post.title/>&#8221;
 </b:if>
 </h4>
 <div id='replylink'>
-<a href='#comment-form'>Leave a response</a> <span style='padding:0 2px;'>|</span> <b:include name='feedLinks'/>
+<b:include name='feedLinks'/>
 </div>
 
       <b:if cond='data:post.commentPagingRequired'>
@@ -1064,37 +1038,6 @@ No response to &#8220;<data:post.title/>&#8221;
     </div>
   </div>
 </b:includable>
-<b:includable id='main' var='top'>
-  <!-- posts -->
-  <div class='blog-posts hfeed'>
-
-    <b:include data='top' name='status-message'/>
-
-    <data:adStart/>
-    <b:loop values='data:posts' var='post'>
-      <b:include data='post' name='post'/>
-      <b:if cond='data:blog.pageType == &quot;item&quot;'>
-        <b:include data='post' name='comments'/>
-      </b:if>
-
-      <b:if cond='data:post.includeAd'>
-        <data:adEnd/>
-        <data:adCode/>
-        <data:adStart/>
-      </b:if>
-      <b:if cond='data:post.trackLatency'>
-        <data:post.latencyJs/>
-      </b:if>
-    </b:loop>
-    <data:adEnd/>
-  </div>
-
-<b:if cond='data:blog.pageType != &quot;item&quot;'>
-  <!-- navigation -->
-  <b:include name='nextprev'/>
-</b:if>
-
-</b:includable>
 </b:widget>
 </b:section>
       </div>
@@ -1102,19 +1045,9 @@ No response to &#8220;<data:post.title/>&#8221;
       <div id='sidebar-wrapper'>
 <div class='hide' id='feedlnks'>
 <div id='feed-links'>
-Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;'>Comments</a> <img class='feed-icon2' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg'/>
+Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;'>Comments</a> <img class='feed-icon2' height='15' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg' width='15'/>
 </div></div>
         <b:section class='sidebar' id='sidebar' preferred='yes'>
-<b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-<b:includable id='main'>
-<center>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</center>
-</b:includable>
-</b:widget>
 <b:widget id='HTML4' locked='false' title='Subscribe via mail' type='HTML'>
 <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -1126,6 +1059,16 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
   </div>
 
   <b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+<b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+<b:includable id='main'>
+<center>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</center>
 </b:includable>
 </b:widget>
 <b:widget id='BlogArchive2' locked='false' title='Old Scratches' type='BlogArchive'>
@@ -1211,7 +1154,7 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
   </ul>
 </b:includable>
 </b:widget>
-<b:widget id='HTML2' locked='false' title='Favourites' type='HTML'>
+<b:widget id='HTML1' locked='false' title='Visitors' type='HTML'>
 <b:includable id='main'>
   <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
@@ -1234,19 +1177,6 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
 </center>
 </b:includable>
 </b:widget>
-<b:widget id='HTML1' locked='false' title='Visitors' type='HTML'>
-<b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-</b:widget>
 </b:section>
       </div>
 
@@ -1255,67 +1185,16 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
 
     </div> <!-- end content-wrapper -->
 
-    <div id='footer-wrapper'>
-      <div id='footer-inner'>
-      <div id='shim'/>
-<b:section class='footer' height='100%' id='ft1' maxwidgets='1' width='100%'>
-<b:widget id='Label1' locked='false' title='' type='Label'>
-<b:includable id='main'>
-  <b:if cond='data:title'>
-    <h2><data:title/></h2>
-  </b:if>
-
-  <div class='widget-content'>
-  <div id='labelCloud'/>
-<script type='text/javascript'>function s(d,e,b,g){if(d&gt;e){e=(d-e)/Math.log(g);d=d-Math.floor(Math.log(b)*e)}else{e=(e-d)/Math.log(g);d=Math.floor(Math.log(b)*e+d)}return d}var c=[],labelCount=[],ts={};<b:loop values='data:labels' var='label'>var theName = &quot;<data:label.name/>&quot;;ts[theName] = <data:label.count/>;</b:loop>for(var t in ts)labelCount[ts[t]]||(labelCount[ts[t]]=new Array(ts[t]));var ta=cloudMin-1;tz=labelCount.length-cloudMin;lc2=document.getElementById(&quot;labelCloud&quot;);ul=document.createElement(&quot;ul&quot;);ul.className=&quot;label-cloud&quot;;for(t in ts)if(!(ts[t]&lt;cloudMin)){for(var i=0;3&gt;i;i++)c[i]=s(minColor[i],maxColor[i],ts[t]-ta,tz);var fs=s(minFontSize,maxFontSize,ts[t]-ta,tz);li=document.createElement(&quot;li&quot;);li.style.fontSize=fs+&quot;px&quot;;li.style.lineHeight=&quot;1&quot;;a=document.createElement(&quot;a&quot;);a.title=ts[t]&gt;1?ts[t]+&quot; posts on &quot;+t:ts[t]+&quot; post on &quot;+t;a.href=&quot;/search/label/&quot;+encodeURIComponent(t);if(lcShowCount){span=document.createElement(&quot;span&quot;);span.innerHTML=&quot;(&quot;+ts[t]+&quot;) &quot;;span.className=&quot;label-count&quot;;a.appendChild(document.createTextNode(t));li.appendChild(a);li.appendChild(span)}else{a.appendChild(document.createTextNode(t));li.appendChild(a)}ul.appendChild(li);abnk=document.createTextNode(&quot; &quot;);ul.appendChild(abnk)}lc2.appendChild(ul);</script>
-
-<noscript>
-    <ul>
-    <b:loop values='data:labels' var='label'>
-      <li>
-        <b:if cond='data:blog.url == data:label.url'>
-          <data:label.name/>
-        <b:else/>
-          <a expr:href='data:label.url'><data:label.name/></a>
-        </b:if>
-        (<data:label.count/>)
-      </li>
-    </b:loop>
-    </ul>
-</noscript>
-    <b:include name='quickedit'/>
-  </div>
-
-</b:includable>
-</b:widget>
-</b:section>
-
-<div class='clear'/>
-      </div>
-    </div>
 <div id='cwrap'>
 <div class='hide' id='credits'>
 <div style='float:left;padding:15px 0;'>
 </div>
 <div style='float:right;padding:15px 0;'>
-<!-- Please do not remove the credit links below. I worked many hours to make this template available free for you. All i ask is to keep the links below intact -->
 </div>
 <div class='clear'/>
 </div>
 </div><!-- end credits -->
-  </div></div> <!-- end outer-wrapper -->
-  <div height='687' id='div_vcomment' style='position:absolute;border:0px;z-index:999;display:none' width='510'>
-    <div class='v_header' width='500'>
-        VComment
-        <img class='v_close' id='img_close' onclick='javascript:hide_comment();' src=''/>
-    </div>
-    <div class='v_content' width='500'>
-<b>Post : </b><span id='v_title'/>
-        <iframe height='657' id='v_container' style='border:0px;position:relative' width='532'/>
-    </div>
-</div>
-<div id='v_overlay'/>
-<script src='http://vcomment.appspot.com/js/overlay.js' type='text/javascript'/>
+</div></div> <!-- end outer-wrapper -->
 
 <!-- Google Analytics -->
 <script type='text/javascript'>
@@ -1333,3 +1212,4 @@ pageTracker._trackPageview();
 <!-- End of Ribbon -->
 </body>
 </html>
+                
