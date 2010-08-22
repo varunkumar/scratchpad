@@ -4,7 +4,7 @@
 // @namespace	IRCTC
 // @include		http://*irctc.co.in/*
 // @include		https://*irctc.co.in/*
-// @version     1.0
+// @version     1.1
 // @author		Varunkumar Nagarajan. Thanks to Sharath and Nitin Kishen for the older(beta) versions
 // ==/UserScript==
 
@@ -678,12 +678,12 @@ function loadDefaultPassengerSettings() {
 	}
 	
 	// Breaking the Captcha
-	jQ("input[name='captchaImage']").val(captchaImage);
+	//jQ("input[name='captchaImage']").val(captchaImage);
 	
 	jQ("input[name='Submit']").click(function() {
-		jQ("img[src*='../recaptcha/articleGenImg.jsp?imageText=']").attr("src", "../recaptcha/articleGenImg.jsp?imageText=" + captchaSource);
-		jQ("input[name='imgPath']").val("../recaptcha/articleGenImg.jsp?imageText=" + captchaSource);
-		jQ("input[name='imgValueReal']").val(captchaSource);
+		//jQ("img[src*='../recaptcha/articleGenImg.jsp?imageText=']").attr("src", "../recaptcha/articleGenImg.jsp?imageText=" + captchaSource);
+		//jQ("input[name='imgPath']").val("../recaptcha/articleGenImg.jsp?imageText=" + captchaSource);
+		//jQ("input[name='imgValueReal']").val(captchaSource);
 		return incrementClicks();
 	});
 }
