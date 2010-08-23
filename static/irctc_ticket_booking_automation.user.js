@@ -23,11 +23,9 @@ var isFirstRun = GM_getValue("firstRun", true );
 
 var keepAlive = GM_getValue("keepAlive", true);
 var refreshInterval = GM_getValue("refreshInterval", 2 * 60 * 1000);
-var captchaSource = "75X56X30X6eX69X64X39X69X51X33X49X3dX";
-var captchaImage = "D4062V";
 var passengerCount = 6;
 
-//Remove the idiotic "Sorry, you do not have permission to right click." message on right click	
+//Remove the "Sorry, you do not have permission to right click." message on right click	
 with (document.wrappedJSObject || document)
 {
 	onmouseup = null;
@@ -676,16 +674,6 @@ function loadDefaultPassengerSettings() {
 			jQ("select[name='passengers[" + i + "].berthPreffer'] option:contains(" + GM_getValue("passengers[" + i + "].berthPreffer", 'Choose Berth') + ")").attr("selected", true);
 		}
 	}
-	
-	// Breaking the Captcha
-	//jQ("input[name='captchaImage']").val(captchaImage);
-	
-	jQ("input[name='Submit']").click(function() {
-		//jQ("img[src*='../recaptcha/articleGenImg.jsp?imageText=']").attr("src", "../recaptcha/articleGenImg.jsp?imageText=" + captchaSource);
-		//jQ("input[name='imgPath']").val("../recaptcha/articleGenImg.jsp?imageText=" + captchaSource);
-		//jQ("input[name='imgValueReal']").val(captchaSource);
-		return incrementClicks();
-	});
 }
 
 GM_registerMenuCommand("IRCTC Ticket Booking Automation Settings", IRCTCSettings);
