@@ -5,9 +5,9 @@
 <!--meta content='chrome=1' http-equiv='X-UA-Compatible'/-->
 <meta content='yfCcMkRpNYzasYCikO6sL+NaycgEvTelaiGFQYedDWA=' name='verify-v1'/>
 <meta content='18742DCEC832E52458981FDC6D48EC7B' name='msvalidate.01'/>
+<link href='http://axemclion.github.com/rupee/rupee.css' rel='stylesheet'/>  
 <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAD5RR7ltUjKKkgTWImFEE-RQjAygp3ezSO8khVcYtNmWB6dkH0hQxF6GcK3-ULpBzIjxyzb5J62WE9A' type='text/javascript'/>
 <script src='http://varun-stats.appspot.com/'/>
-<script>function show(d){var e=document.getElementById(&quot;divHome&quot;),b=document.getElementById(&quot;divAbout&quot;),g=document.getElementById(&quot;divContact&quot;),h=document.getElementById(&quot;aHome&quot;),f=document.getElementById(&quot;aAbout&quot;),j=document.getElementById(&quot;aContact&quot;);if(d==null||d==&quot;home&quot;){h.setAttribute(&quot;class&quot;,&quot;selected&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;block&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;none&quot;;<b:if cond='data:blog.url != data:blog.homepageUrl'>window.location=/&quot;;</b:if>}else if(d==&quot;about&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;selected&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;block&quot;;g.style.display=&quot;none&quot;}else if(d==&quot;contact&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;selected&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;block&quot;}}</script>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <b:skin><![CDATA[
@@ -38,13 +38,6 @@
 */
 
 #navbar,.quickedit{display:none;}
-
-div#shim {
-visibility: hidden;
-width: 100%;
-height: 12%;
-float: left;
-}
 
 body {
   background:#fff;
@@ -433,44 +426,7 @@ h4#resp{padding:0;margin:10px 0;}
   border-bottom-width: 0;
 }
 
-
-/* Profile 
------------------------------------------------ */
-.profile-img { 
-  float: $startSide;
-  margin-top: 0;
-  margin-$endSide: 5px;
-  margin-bottom: 5px;
-  margin-$startSide: 0;
-  padding: 4px;
-  border: 1px solid $bordercolor;
-}
-
-.profile-data {
-  margin:0;
-  
-  letter-spacing:.1em;
-  font: $postfooterfont;
-  font-weight: bold;
-  line-height: 1.6em;
-}
-
-.profile-datablock { 
-  margin:.5em 0 .5em;
-}
-
-.profile-textblock { 
-  margin: 0.5em 0;
-  line-height: 1.6em;
-}
-
-.profile-link { 
-  font: $postfooterfont;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-}
-
-#cwrap{background:#12191f;margin:0;padding:0;} 
+#cwrap{background:#12191f;margin:0;padding:0;color:#ffffff;} 
 
 /* layout tweaks for the page element tab  */
 body#layout,
@@ -484,7 +440,19 @@ body#layout .hide{display:none;}
 body#layout #featured{height:60px;}
 #navigation a.selected{ text-decoration:none;background: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/zipqut.jpg) bottom center no-repeat;}
 #navigation a{text-decoration:none;}
-#twitter_update_list li {padding-top: 5px;}
+
+/* Label Cloud Styles
+----------------------------------------------- */
+#labelCloud1 {text-align:center;font-family:arial,sans-serif;}
+#labelCloud1 .label-cloud li{display:inline;background-image:none !important;padding:0 5px;margin:0;vertical-align:baseline !important;border:0 !important;}
+#labelCloud1 ul{list-style-type:none;margin:0 auto;padding:0;}
+#labelCloud1 a img{border:0;display:inline;margin:0 0 0 3px;padding:0}
+#labelCloud1 a{text-decoration:underline;color:#6699CC;}
+#labelCloud1 a:hover{text-decoration:underline;color:#669933;}
+#labelCloud1 li a{}
+#labelCloud1 .label-cloud {}
+#labelCloud1 .label-count {padding-left:0.2em;font-size:9px;color:#000}
+#labelCloud1 .label-cloud li:before{content:"" !important} 
 ]]></b:skin></head>
 
   <body>
@@ -568,7 +536,7 @@ body#layout #featured{height:60px;}
         <table style='border: 0px none ; width: 99%;'>
             <tr>
                 <td><img src='http://varun-scratchpad.googlecode.com/svn/trunk/images/Varun.JPG' style='width:150px;height:150px;padding: 5px;border: 1px solid #777777' tag='Author'/></td>
-                <td style='text-align:justify;padding-left:10px'><b>Varunkumar Nagarajan</b>, the author of this blog, is a Software Engineer currently employed with <a href='http://www.deshaw.com'>D.E.Shaw &amp; Co., Hyderabad</a>. Varun completed his Five Years Integrated M.Sc (Software Engineering) programme from <a href='http://www.psgtech.edu'>P.S.G. College of Technology, Coimbatore</a>. He has worked for <a href='http://www.intel.com'>Intel Technology India Pvt. Ltd.</a> and <a href='http://www.interchainsol.com/'>Interchain Solutions</a> as an intern. A programmer by choice. He loves programming and started blogging on Aug-2006. From then, he became socially active on internet.<br/><br/>
+                <td style='text-align:justify;padding-left:10px'><b>Varunkumar Nagarajan</b>, the author of this blog, is a Software Engineer from Hyderabad. Varun completed his Five Years Integrated M.Sc (Software Engineering) programme from <a href='http://www.psgtech.edu'>P.S.G. College of Technology, Coimbatore</a>. He has worked for <a href='http://www.intel.com'>Intel Technology India Pvt. Ltd.</a> and <a href='http://www.interchainsol.com/'>Interchain Solutions</a> as an intern. A programmer by choice. He loves programming and started blogging on Aug-2006. From then, he became socially active on internet.<br/><br/>
                 Other than programming, Varun is very much passionate about cricket. A die-hard fan of <a href='http://en.wikipedia.org/wiki/Rahul_Dravid'>Rahul Dravid</a>. His hobbies include creating flash animations, developing games, etc.<br/><br/>
                 Contact <a href='javascript:show(&quot;contact&quot;);'>Varun</a></td>
             </tr>
@@ -602,12 +570,12 @@ body#layout #featured{height:60px;}
     </div>
 </div>
 <div class='hide' id='searchbox'>
-<!--form action='/search' id='search_form' method='get'>
+<form action='/search' id='search_form' method='get'>
 <input id='s' name='q' type='text'/>
 <input alt='Search' height='32' id='go' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2hd8p3o.jpg' title='Search' type='image' width='72'/>
-</form-->
+</form>
 
-<script src='http://www.google.com/jsapi' type='text/javascript'/>
+<!--script src='http://www.google.com/jsapi' type='text/javascript'/>
 <script type='text/javascript'>
   google.load(&#39;search&#39;, &#39;1&#39;);
   google.setOnLoadCallback(function() {
@@ -626,7 +594,7 @@ body#layout #featured{height:60px;}
 
   </div>
 </form>
-<script src='http://www.google.co.in/cse/brand?form=cse-search-box&amp;lang=en' type='text/javascript'/>
+<script src='http://www.google.co.in/cse/brand?form=cse-search-box&amp;lang=en' type='text/javascript'/-->
 </div><!-- end searchbox -->
 <div class='clear'/>
 </div><!-- featured-wrap -->
@@ -725,6 +693,11 @@ body#layout #featured{height:60px;}
 
     <div class='post-body entry-content'>
       <data:post.body/>
+      <b:if cond='data:post.hasJumpLink'>
+<div class='jump-link'>
+<a expr:href='data:post.url + &quot;#more&quot;'><data:post.jumpText/></a>
+</div>
+</b:if>
       <div style='clear: both;'/> <!-- clear for photos floats -->
     </div>
     <div class='post-footer'>
@@ -825,9 +798,9 @@ body#layout #featured{height:60px;}
       </b:if>
 
       <b:if cond='data:post.includeAd'>
-        <data:adEnd/>
+        <center><data:adEnd/>
         <data:adCode/>
-        <data:adStart/>
+        <data:adStart/></center>
       </b:if>
       <b:if cond='data:post.trackLatency'>
         <data:post.latencyJs/>
@@ -1167,16 +1140,6 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
   <b:include name='quickedit'/>
 </b:includable>
 </b:widget>
-<b:widget id='AdSense1' locked='false' title='' type='AdSense'>
-<b:includable id='main'>
-<center>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</center>
-</b:includable>
-</b:widget>
 </b:section>
       </div>
 
@@ -1188,6 +1151,7 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
 <div id='cwrap'>
 <div class='hide' id='credits'>
 <div style='float:left;padding:15px 0;'>
+Varun&#39;s Scratchpad. All contents in this blog are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/in' target='_blank'>Non-Commercial Share Alike 2.5</a> license. <a href='http://www.blogadda.com' title='Visit blogadda.com to discover Indian blogs'> <img alt='Visit blogadda.com to discover Indian blogs' border='0' height='15' src='http://www.blogadda.com/images/blogadda.png' width='80'/></a>
 </div>
 <div style='float:right;padding:15px 0;'>
 </div>
@@ -1209,7 +1173,7 @@ pageTracker._trackPageview();
 <!-- End of Google Analytics -->
 
 <!-- Ribbon -->
-<!-- End of Ribbon -->
+<a href='http://varunkumar-n.blogspot.com/2010/06/upcoming-tedx-events-in-india.html' target=''><img border='0' height='150' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/ribbon.gif' style='position: absolute; right: 0px; top: 0px; margin: 0px; padding: 0px;' width='150'/></a><!-- End of Ribbon -->
+<script>function show(d){var e=document.getElementById(&quot;divHome&quot;),b=document.getElementById(&quot;divAbout&quot;),g=document.getElementById(&quot;divContact&quot;),h=document.getElementById(&quot;aHome&quot;),f=document.getElementById(&quot;aAbout&quot;),j=document.getElementById(&quot;aContact&quot;);if(d==null||d==&quot;home&quot;){h.setAttribute(&quot;class&quot;,&quot;selected&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;block&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;none&quot;;<b:if cond='data:blog.url != data:blog.homepageUrl'>window.location=&quot;/&quot;;</b:if>}else if(d==&quot;about&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;selected&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;block&quot;;g.style.display=&quot;none&quot;}else if(d==&quot;contact&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;selected&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;block&quot;}}</script>
 </body>
 </html>
-                
