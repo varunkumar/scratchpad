@@ -6,7 +6,7 @@
 // @include        https://*facebook.com/*
 // @version        1.1
 // @author         Varunkumar Nagarajan
-// ==UserScript==
+// ==/UserScript==
 
 //================Helper Methods==========================
 String.prototype.trim = function () {
