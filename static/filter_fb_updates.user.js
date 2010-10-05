@@ -188,7 +188,7 @@ function prepareUI() {
 	filterBox.appendChild(connectionLabel);
 	filterBox.appendChild(document.createElement("br"));
 	
-	// Remove Connection Checkbox
+	// Remove Attachments Checkbox
 	var caseAttachments = document.createElement("input");
 	caseAttachments.setAttribute("type", "checkbox");
 	caseAttachments.setAttribute("title", "Attachments include shared videos, photos, links, etc");
