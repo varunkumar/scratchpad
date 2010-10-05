@@ -4,7 +4,7 @@
 // @description    Script for filtering Facebook updates about a specific topic.
 // @include        http://*facebook.com*
 // @include        https://*facebook.com/*
-// @version        1.1
+// @version        1.2
 // @author         Varunkumar Nagarajan
 // ==/UserScript==
 
@@ -85,7 +85,6 @@ if (typeof GM_deleteValue == 'undefined') {
 //================Global Variables========================
 var screenName = "";
 var timer;
-
 //========================================================
 
 prepareUI();
@@ -151,7 +150,7 @@ function prepareUI() {
 	// Case Sensitive Checkbox
 	var caseCheckBox = document.createElement("input");
 	caseCheckBox.setAttribute("type", "checkbox");
-	caseCheckBox.setAttribute("value", "Case Sensitive");
+	caseCheckBox.setAttribute("title", "Case Sensitive");
 	caseCheckBox.setAttribute("id", "chkCase");
 	if (GM_getValue(screenName + "CaseSensitive", false))
 		caseCheckBox.setAttribute("checked", "true");
@@ -159,6 +158,48 @@ function prepareUI() {
 	var caseLabel = document.createElement("span");
 	caseLabel.innerHTML = "&nbsp;Case Sensitive&nbsp;&nbsp;"
 	filterBox.appendChild(caseLabel);
+	filterBox.appendChild(document.createElement("br"));
+	
+	// Remove Likes Checkbox
+	var caseLikes = document.createElement("input");
+	caseLikes.setAttribute("type", "checkbox");
+	caseLikes.setAttribute("title", "I don't care about what my friends like");
+	caseLikes.setAttribute("id", "chkLikes");
+	if (GM_getValue(screenName + "RemoveLikes", false))
+		caseLikes.setAttribute("checked", "true");
+	filterBox.appendChild(caseLikes);
+	var likesLabel = document.createElement("span");
+	likesLabel.innerHTML = "&nbsp;Hide the 'Likes' from friends&nbsp;&nbsp;"
+	likesLabel.setAttribute("title", "I don't care about what my friends like");
+	filterBox.appendChild(likesLabel);
+	filterBox.appendChild(document.createElement("br"));
+	
+	// Remove Connection Checkbox
+	var caseConnection = document.createElement("input");
+	caseConnection.setAttribute("type", "checkbox");
+	caseConnection.setAttribute("title", "I don't really care about who has be-friened whom");
+	caseConnection.setAttribute("id", "chkConnection");
+	if (GM_getValue(screenName + "RemoveConnection", false))
+		caseConnection.setAttribute("checked", "true");
+	filterBox.appendChild(caseConnection);
+	var connectionLabel = document.createElement("span");
+	connectionLabel.innerHTML = "&nbsp;Hide the friend connection updates&nbsp;&nbsp;"
+	connectionLabel.setAttribute("title", "I don't really care about who has be-friened whom");
+	filterBox.appendChild(connectionLabel);
+	filterBox.appendChild(document.createElement("br"));
+	
+	// Remove Connection Checkbox
+	var caseAttachments = document.createElement("input");
+	caseAttachments.setAttribute("type", "checkbox");
+	caseAttachments.setAttribute("title", "Attachments include shared videos, photos, links, etc");
+	caseAttachments.setAttribute("id", "chkAttachments");
+	if (GM_getValue(screenName + "RemoveAttachments", false))
+		caseAttachments.setAttribute("checked", "true");
+	filterBox.appendChild(caseAttachments);
+	var attachmentsLabel = document.createElement("span");
+	attachmentsLabel.setAttribute("title", "Attachments include shared videos, photos, links, etc");
+	attachmentsLabel.innerHTML = "&nbsp;Hide the attachments&nbsp;&nbsp;"
+	filterBox.appendChild(attachmentsLabel);
 	filterBox.appendChild(document.createElement("br"));
 	filterBox.appendChild(document.createElement("br"));
 	
@@ -238,9 +279,15 @@ function clearFilters () {
  function applyFilters () {	
 	var txtWords = document.getElementById('txtWords');
 	var chkCase = document.getElementById('chkCase');
+	var chkLikes = document.getElementById('chkLikes');
+	var chkConnection = document.getElementById('chkConnection');
+	var chkAttachments = document.getElementById('chkAttachments');
 	
 	var wordsStr = txtWords.value;
 	var caseSensitive = chkCase.checked;
+	var removeLikes = chkLikes.checked;
+	var removeConnection = chkConnection.checked;
+	var removeAttachments = chkAttachments.checked;
 	
 	var statuses = document.evaluate(".//*[@id='home_stream']/li", document, null, XPathResult.ANY_TYPE, null); 
 
@@ -251,6 +298,9 @@ function clearFilters () {
 	try {
 		GM_setValue(screenName + "WordsFilters", wordsStr);
 		GM_setValue(screenName + "CaseSensitive", caseSensitive);
+		GM_setValue(screenName + "RemoveLikes", removeLikes);
+		GM_setValue(screenName + "RemoveConnection", removeConnection);
+		GM_setValue(screenName + "RemoveAttachments", removeAttachments);
 	} catch(e) {}
 	
 	var matchedStatuses = [];
@@ -264,8 +314,17 @@ function clearFilters () {
 		status = statuses.iterateNext(); 
 	}
 	while (status) {
-		var content = status.textContent;//(contentDOM.length > 0) ? contentDOM[0].textContent : "";
+		var content = status.textContent;
 		
+		// Filtering the likes and friend connection
+		var passiveContents = getElementByClass("uiStreamPassive", status);
+		var passiveContent = (passiveContents.length > 0) ? passiveContents[0].textContent : "";
+		passiveContent = passiveContent.toLowerCase();
+		
+		// Getting the attachment title
+		var attachments = getElementByClass("uiAttachmentTitle", status);
+		
+		// Cleaning up the contents
 		if (content == null || content.length == 0)
 			content = "";
 		
@@ -273,21 +332,36 @@ function clearFilters () {
 			content = content.toLowerCase();
 		}
 		
-		var wordFilters = wordsStr.split(",");
-			
 		var found = false;
-		for (var i = 0; i < wordFilters.length; i++) {
-			var filter = wordFilters[i].trim();
-			if (filter == "")
-				continue;
+		
+		// Like filtering
+		if (removeLikes && passiveContent.indexOf(" likes ") != -1)
+			found = true;
 			
-			if (!caseSensitive)
-				filter = filter.toLowerCase();
-			
-			if (content.indexOf(filter) != -1) {
-				found = true;
-				break;
-			} 
+		// Friend Connection filtering
+		if (removeConnection && passiveContent.indexOf(" now friends with ") != -1)
+			found = true;
+		
+		// Filtering attachments. Shared Links, Videos, Photos, etc.
+		if (removeAttachments && attachments.length > 0)
+			found = true;
+		
+		// Keywords filtering
+		if (!found) {
+			var wordFilters = wordsStr.split(",");
+			for (var i = 0; i < wordFilters.length; i++) {
+				var filter = wordFilters[i].trim();
+				if (filter == "")
+					continue;
+				
+				if (!caseSensitive)
+					filter = filter.toLowerCase();
+				
+				if (content.indexOf(filter) != -1) {
+					found = true;
+					break;
+				} 
+			}
 		}
 				
 		if (found) {
