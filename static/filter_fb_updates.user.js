@@ -163,14 +163,14 @@ function prepareUI() {
 	// Remove Likes Checkbox
 	var caseLikes = document.createElement("input");
 	caseLikes.setAttribute("type", "checkbox");
-	caseLikes.setAttribute("title", "I don't care about what my friends like");
+	caseLikes.setAttribute("title", "I don't care about what my friends like / recommend");
 	caseLikes.setAttribute("id", "chkLikes");
 	if (GM_getValue(screenName + "RemoveLikes", false))
 		caseLikes.setAttribute("checked", "true");
 	filterBox.appendChild(caseLikes);
 	var likesLabel = document.createElement("span");
 	likesLabel.innerHTML = "&nbsp;Hide the 'Likes' from friends&nbsp;&nbsp;"
-	likesLabel.setAttribute("title", "I don't care about what my friends like");
+	likesLabel.setAttribute("title", "I don't care about what my friends like / recommend");
 	filterBox.appendChild(likesLabel);
 	filterBox.appendChild(document.createElement("br"));
 	
@@ -269,9 +269,15 @@ function toggleFilterBox() {
 function clearFilters () {
 	var txtWords = document.getElementById('txtWords');
 	var chkCase = document.getElementById('chkCase');
+        var chkLikes = document.getElementById('chkLikes');
+	var chkConnection = document.getElementById('chkConnection');
+	var chkAttachments = document.getElementById('chkAttachments');
 	
 	txtWords.value = "";
 	chkCase.checked = false;
+	chkLikes.checked = false;
+	chkConnection.checked = false;
+	chkAttachments.checked = false;
 	
 	applyFilters();
 };
@@ -335,11 +341,11 @@ function clearFilters () {
 		var found = false;
 		
 		// Like filtering
-		if (removeLikes && passiveContent.indexOf(" likes ") != -1)
+		if (removeLikes && (passiveContent.indexOf(" likes ") != -1 || passiveContent.indexOf(" recommends ") != -1 || passiveContent.indexOf(" like ") != -1 || passiveContent.indexOf(" recommend ") != -1))
 			found = true;
 			
 		// Friend Connection filtering
-		if (removeConnection && passiveContent.indexOf(" now friends with ") != -1)
+		if (removeConnection && (passiveContent.indexOf(" now friends with ") != -1 || passiveContent.indexOf(" now friends.") != -1))
 			found = true;
 		
 		// Filtering attachments. Shared Links, Videos, Photos, etc.
