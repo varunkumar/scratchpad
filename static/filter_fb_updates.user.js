@@ -107,6 +107,7 @@ function prepareUI() {
 	
 	var anchor = document.createElement("a");
 	anchor.setAttribute("id", "global-nav-filters-link");
+	anchor.setAttribute("style", "color:'';position:relative");
 	anchor.addEventListener("click", toggleFilterBox, false);
 	anchor.innerHTML = "Filters";
 	list.appendChild(anchor);
@@ -245,7 +246,7 @@ function toggleFilterBox() {
 		var filterMenu = document.getElementById("global-nav-filters");
 		filterMenu.setAttribute("style", "background-color:#FFFFFF");
 		var filterMenuLink = document.getElementById("global-nav-filters-link");
-		filterMenuLink.setAttribute("style", "color:#333333");
+		filterMenuLink.setAttribute("style", "color:#333333;position:relative");
 		
 		var filterBox = document.getElementById("divFilterBox");
 		filterBox.style.left = (getAbsPos("global-nav-filters", "left") + parseInt(filterMenu.offsetWidth) - parseInt(filterBox.style.width) - 25) + "px";
@@ -257,7 +258,7 @@ function toggleFilterBox() {
 		filterMenu.setAttribute("style", "background-color:''");
 		
 		var filterMenuLink = document.getElementById("global-nav-filters-link");
-		filterMenuLink.setAttribute("style", "color:''");
+		filterMenuLink.setAttribute("style", "color:'';position:relative");
 		
 		var filterBox = document.getElementById("divFilterBox");
 		filterBox.style.display = "none";
@@ -349,8 +350,27 @@ function clearFilters () {
 			found = true;
 		
 		// Filtering attachments. Shared Links, Videos, Photos, etc.
-		if (removeAttachments && attachments.length > 0)
-			found = true;
+		if (removeAttachments) {
+			if (attachments.length > 0)
+				found = true;
+			else {
+				// Check for attachments without title on the stream
+				attachments = getElementByClass("uiStreamAttachments", status);
+				if (attachments.length > 0)
+					found = true;
+				else {
+					// Check for attachments title on profile page
+					attachments = getElementByClass("UIStoryAttachment_Title", status);
+					if (attachments.length > 0)
+						found = true;
+					else {
+						attachments = getElementByClass("UIStoryAttachment", status);
+						if (attachments.length > 0)
+							found = true;
+					}
+				}
+			}
+		}
 		
 		// Keywords filtering
 		if (!found) {
