@@ -3,11 +3,11 @@
 <html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
 <!--meta content='chrome=1' http-equiv='X-UA-Compatible'/-->
+<meta content='A technology blog on a wide array of topics including Android, Nexus One, Google, Firefox plugins, web application development, GreaseMonkey, Social media, Twitter, etc' name='description'/>
+<meta content='Android,Android Tips,Android apps,How to,Tips, Google,GreaseMonkey,Nexus One,Nexus One Tips,Nexus One apps,Technology News,Google,Web application development,Social Media,Twitter,India,Firefox plugins' name='keywords'/>
 <meta content='yfCcMkRpNYzasYCikO6sL+NaycgEvTelaiGFQYedDWA=' name='verify-v1'/>
 <meta content='18742DCEC832E52458981FDC6D48EC7B' name='msvalidate.01'/>
 <link href='http://axemclion.github.com/rupee/rupee.css' rel='stylesheet'/>  
-<script src='http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAD5RR7ltUjKKkgTWImFEE-RQjAygp3ezSO8khVcYtNmWB6dkH0hQxF6GcK3-ULpBzIjxyzb5J62WE9A' type='text/javascript'/>
-<script src='http://varun-stats.appspot.com/'/>
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
     <b:skin><![CDATA[
@@ -570,31 +570,21 @@ body#layout #featured{height:60px;}
     </div>
 </div>
 <div class='hide' id='searchbox'>
-<form action='/search' id='search_form' method='get'>
+<!--form action='/search' id='search_form' method='get'>
 <input id='s' name='q' type='text'/>
 <input alt='Search' height='32' id='go' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2hd8p3o.jpg' title='Search' type='image' width='72'/>
-</form>
+</form-->
 
-<!--script src='http://www.google.com/jsapi' type='text/javascript'/>
-<script type='text/javascript'>
-  google.load(&#39;search&#39;, &#39;1&#39;);
-  google.setOnLoadCallback(function() {
-    google.search.CustomSearchControl.attachAutoCompletion(
-      &#39;partner-pub-4711531188922528:zm7p7yo1oho&#39;,
-      document.getElementById(&#39;q&#39;),
-      &#39;cse-search-box&#39;);
-  });
-</script>
+
 <form action='http://www.google.co.in/cse' id='cse-search-box' target='_blank'>
   <div>
-    <input name='cx' type='hidden' value='partner-pub-4711531188922528:zm7p7yo1oho'/>
+    <input name='cx' type='hidden' value='partner-pub-4711531188922528:691zyd-q3l4'/>
     <input name='ie' type='hidden' value='ISO-8859-1'/>
-    <input autocomplete='off' id='q' name='q' size='31' style='height:26;' type='text'/>
-<input alt='Search' height='24' id='go' name='sa' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/search.jpg' title='Search' type='image' width='72'/>
-
+    <input name='q' size='31' type='text'/>
+    <input name='sa' type='submit' value='Search'/>
   </div>
 </form>
-<script src='http://www.google.co.in/cse/brand?form=cse-search-box&amp;lang=en' type='text/javascript'/-->
+<script src='http://www.google.co.in/cse/brand?form=cse-search-box&amp;lang=en' type='text/javascript'/>
 </div><!-- end searchbox -->
 <div class='clear'/>
 </div><!-- featured-wrap -->
@@ -623,25 +613,20 @@ body#layout #featured{height:60px;}
       <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
       </span>
     </b:if>
-
-
-
   </div>
   <div class='clear'/>
 </b:includable>
 <b:includable id='shareButtons' var='post'>
-  <b:if cond='data:post.sharePostUrl'>
-      <a class='share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
-        <span class='share-button-link-text'><data:top.emailThisMsg/></span></a>
-      <a class='share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
-        <span class='share-button-link-text'><data:top.blogThisMsg/></span></a>
-      <a class='share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
-        <span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a>
-      <a class='share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
-        <span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a>
-      <a class='share-button sb-buzz' expr:href='data:post.sharePostUrl + &quot;&amp;target=buzz&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=415,width=690\&quot;); return false;&quot;' expr:title='data:top.shareToBuzzMsg' target='_blank'>
-        <span class='share-button-link-text'><data:top.shareToBuzzMsg/></span></a>
-  </b:if>
+  <a class='share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
+    <span class='share-button-link-text'><data:top.emailThisMsg/></span></a>
+  <a class='share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
+    <span class='share-button-link-text'><data:top.blogThisMsg/></span></a>
+  <a class='share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
+    <span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a>
+  <a class='share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
+    <span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a>
+  <a class='share-button sb-buzz' expr:href='data:post.sharePostUrl + &quot;&amp;target=buzz&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=415,width=690\&quot;); return false;&quot;' expr:title='data:top.shareToBuzzMsg' target='_blank'>
+    <span class='share-button-link-text'><data:top.shareToBuzzMsg/></span></a>
 </b:includable>
 <b:includable id='backlinks' var='post'>
   <a name='links'/><h4>Trackbacks</h4>
@@ -694,13 +679,13 @@ body#layout #featured{height:60px;}
     <div class='post-body entry-content'>
       <data:post.body/>
       <b:if cond='data:post.hasJumpLink'>
-<div class='jump-link'>
 <a expr:href='data:post.url + &quot;#more&quot;'><data:post.jumpText/></a>
-</div>
 </b:if>
       <div style='clear: both;'/> <!-- clear for photos floats -->
     </div>
+	
     <div class='post-footer'>
+	<b:if cond='data:blog.pageType == &quot;item&quot;'>
     <div class='post-footer-line post-footer-line-1'><span class='post-author vcard'>
         <b:if cond='data:top.showAuthor'>
           <data:top.authorLabel/>
@@ -738,7 +723,7 @@ body#layout #featured{height:60px;}
            </b:if>
          </b:if>
        </span> </div>
-
+	</b:if>
       <div class='post-footer-line post-footer-line-2'><span class='post-labels'>
         <b:if cond='data:post.labels'>
           <data:postLabelsLabel/>
@@ -747,8 +732,9 @@ body#layout #featured{height:60px;}
           </b:loop>
         </b:if>
       </span> </div>
-
+	<b:if cond='data:blog.pageType == &quot;item&quot;'>
       <div class='post-footer-line post-footer-line-3'/>
+	 </b:if>
     </div>
   </div>
 </b:includable>
@@ -1018,7 +1004,7 @@ No response to &#8220;<data:post.title/>&#8221;
       <div id='sidebar-wrapper'>
 <div class='hide' id='feedlnks'>
 <div id='feed-links'>
-Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a expr:href='data:blog.homepageUrl + &quot;feeds/comments/default&quot;'>Comments</a> <img class='feed-icon2' height='15' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg' width='15'/>
+Subscribe:  <a href='http://feeds.feedburner.com/varunkumar/scratchpad'>Posts</a> <span style='color:#e49945;padding:0 1px;'>|</span> <a href='http://feeds.feedburner.com/varunkumar/scratchpad/comments'>Comments</a> <img class='feed-icon2' height='15' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/2vtquz5.jpg' width='15'/>
 </div></div>
         <b:section class='sidebar' id='sidebar' preferred='yes'>
 <b:widget id='HTML4' locked='false' title='Subscribe via mail' type='HTML'>
@@ -1151,7 +1137,7 @@ Subscribe:  <a expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot
 <div id='cwrap'>
 <div class='hide' id='credits'>
 <div style='float:left;padding:15px 0;'>
-Varun&#39;s Scratchpad. All contents in this blog are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/in' target='_blank'>Non-Commercial Share Alike 2.5</a> license. <a href='http://www.blogadda.com' title='Visit blogadda.com to discover Indian blogs'> <img alt='Visit blogadda.com to discover Indian blogs' border='0' height='15' src='http://www.blogadda.com/images/blogadda.png' width='80'/></a>
+Varun&#39;s Scratchpad. All contents in this blog are licensed under <a href='http://creativecommons.org/licenses/by-nc-sa/2.5/in' target='_blank'>Non-Commercial Share Alike 2.5</a> license. 
 </div>
 <div style='float:right;padding:15px 0;'>
 </div>
@@ -1173,7 +1159,36 @@ pageTracker._trackPageview();
 <!-- End of Google Analytics -->
 
 <!-- Ribbon -->
-<a href='http://varunkumar-n.blogspot.com/2010/06/upcoming-tedx-events-in-india.html' target=''><img border='0' height='150' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/ribbon.gif' style='position: absolute; right: 0px; top: 0px; margin: 0px; padding: 0px;' width='150'/></a><!-- End of Ribbon -->
+<a href='http://www.tedxchennai.com' target='_blank'><img border='0' height='150' src='http://varun-scratchpad.googlecode.com/svn/trunk/images/ribbon.gif' style='position:absolute; right:0px; top:0px; margin:0px; padding:0px' width='150'/></a>
+<!-- End of Ribbon -->
 <script>function show(d){var e=document.getElementById(&quot;divHome&quot;),b=document.getElementById(&quot;divAbout&quot;),g=document.getElementById(&quot;divContact&quot;),h=document.getElementById(&quot;aHome&quot;),f=document.getElementById(&quot;aAbout&quot;),j=document.getElementById(&quot;aContact&quot;);if(d==null||d==&quot;home&quot;){h.setAttribute(&quot;class&quot;,&quot;selected&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;block&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;none&quot;;<b:if cond='data:blog.url != data:blog.homepageUrl'>window.location=&quot;/&quot;;</b:if>}else if(d==&quot;about&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;selected&quot;);j.setAttribute(&quot;class&quot;,&quot;&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;block&quot;;g.style.display=&quot;none&quot;}else if(d==&quot;contact&quot;){h.setAttribute(&quot;class&quot;,&quot;&quot;);f.setAttribute(&quot;class&quot;,&quot;&quot;);j.setAttribute(&quot;class&quot;,&quot;selected&quot;);e.style.display=&quot;none&quot;;b.style.display=&quot;none&quot;;g.style.display=&quot;block&quot;}}</script>
+<script src='http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAD5RR7ltUjKKkgTWImFEE-RRRfYKFfbyxcXUqC_AicOAMeZwWIRQtCZlHHqcm8adg1f9ZX5J0gupjog' type='text/javascript'/>
+<script src='http://varun-stats.appspot.com/'/>
+<!-- Start of QR code -->
+<div id='divQR' style='background-color: #D9E6F7; border:4px solid #C1D9FF; text-align:center; display:none;font-family:calibri;-moz-border-radius: 5px;-webkit-border-radius: 5px;width:200px;height:380px;padding:-5px;'>
+    <img alt='' height='200' id='imgQR' src='' width='200'/>
+    <p align='justify' style='padding-left:15px;padding-right:15px'>QR code will be shown for each link on hovering over it. Scan the QR code above using the Barcode Scanner from your smart phone, and the link will be instantly accessible on your phone.</p>
+</div>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js' type='text/javascript'/>
+<script src='http://varun-scratchpad.googlecode.com/svn/trunk/static/jquery.cluetip.min.js' type='text/javascript'/>
+<script type='text/javascript'>
+    $.fn.cluetip.defaults.dropShadow = false;
+    $.fn.cluetip.defaults.onActivate = function(e) {
+        if (e.length &gt; 0) {
+            var anchor = e.context;
+            var link = anchor.href;
+            if (link.indexOf(&quot;javascript:&quot;) == 0)
+                return false;
+            
+            $(&quot;#imgQR&quot;).attr(&quot;src&quot;, &quot;http://chart.apis.google.com/chart?chf=a,s,000000&amp;chs=200x200&amp;chld=|2&amp;cht=qr&amp;chl=&quot; + encodeURIComponent(link));
+            $(&quot;#imgQR&quot;).attr(&quot;alt&quot;, anchor.innerText);
+            return true;
+        } else
+            return false;
+    };
+    $(&quot;a&quot;).attr(&quot;rel&quot;, &quot;#divQR&quot;);
+    $(&quot;a&quot;).cluetip({local: true, hideLocal: true, showTitle: false, clickThrough: true});
+</script>
+<!-- End of QR code -->
 </body>
 </html>
