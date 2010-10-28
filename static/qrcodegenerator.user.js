@@ -56,7 +56,7 @@ function GM_init() {
 			return false;
 	};
 	JQ("a").attr("rel", "#divQR");
-	JQ("a").cluetip({local: true, hideLocal: true, showTitle: false});
+	JQ("a").cluetip({local: true, hideLocal: true, showTitle: false, clickThrough: true});
 	
 	var myDiv = document.createElement("div");
 	myDiv.setAttribute("id", "divQR");
