@@ -208,6 +208,17 @@ a img {
  margin:0; 
  padding:0;
 }
+.preview {
+background-image: url(http://varun-scratchpad.googlecode.com/svn/trunk/images/nexusone.png);
+float: left;
+height: 460px;
+margin-bottom: 30px;
+margin-right: 19px;
+padding-top: 50px;
+width: 221px;
+text-align: center;
+align: center;
+}
 /* Outer-Wrapper
 ----------------------------------------------- */
 #outer-wrapper {
