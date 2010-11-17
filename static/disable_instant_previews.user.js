@@ -2,6 +2,8 @@
 // @name           Disable Instant Previews
 // @namespace      http://blog.varunkumar.me
 // @description    GM Script to disable Google Instant Previews
+// @include        http://www.google.*/search*
+// @include        https://www.google.*/search*
 // @include        http://www.google.*
 // @include        https://www.google.*
 // @exclude        http://www.google.*/accounts/*
@@ -82,20 +84,104 @@
 // @exclude        https://www.google.*/video/*
 // @exclude        http://www.google.*/webmasters/*
 // @exclude        https://www.google.*/webmasters/*
+// @version     1.1
+// @author		Varunkumar Nagarajan. http://varunkumar.me
 // ==/UserScript==
 
-// Adding button to enable / disable previews
-var button = document.createElement("a");
-button.innerHTML="Disable Instant Previews";
-button.setAttribute("id", "btnPreviewSwitch");
-button.setAttribute("href", "javascript:void(0);");
-button.setAttribute("style", "position: absolute; top: 35px; right: 10px; z-index: 101");
-button.addEventListener("click", togglePreview, false);
-document.body.appendChild(button);
+//================Chrome Compatibility====================
+// This is needed for remembering the switch
+if (typeof GM_deleteValue == 'undefined') {
+	if(typeof unsafeWindow == 'undefined') { 
+		unsafeWindow = window; 
+	}
+	
+	GM_addStyle = function(css) {
+		var style = document.createElement('style');
+		style.textContent = css;
+		document.getElementsByTagName('head')[0].appendChild(style);
+	}
 
-function togglePreview() {
+	GM_deleteValue = function(name) {
+		localStorage.removeItem(name);
+	}
+
+	GM_getValue = function(name, defaultValue) {
+		var value = localStorage.getItem(name);
+		if (!value)
+			return defaultValue;
+		var type = value[0];
+		value = value.substring(1);
+		switch (type) {
+			case 'b':
+				return value == 'true';
+			case 'n':
+				return Number(value);
+			default:
+				return value;
+		}
+	}
+
+	GM_log = function(message) {
+		console.log(message);
+	}
+
+	 GM_registerMenuCommand = function(name, funk) {
+	//todo
+	}
+
+	GM_setValue = function(name, value) {
+		value = (typeof value)[0] + value;
+		localStorage.setItem(name, value);
+	}
+}
+//========================================================
+
+GM_wait();
+
+function GM_wait() {
+	// Wait for the preview canvas to initialize
+	var vspb = document.getElementById("vspb");
+	if (vspb == null)
+		window.setTimeout(GM_wait, 1000);
+	else
+		GM_init();
+}
+
+function GM_init() {
+	// Adding button to enable / disable previews
+	var button = document.createElement("a");
+	button.innerHTML=GM_getValue("btnPreviewSwitch", "Enable Instant Previews");
+	button.setAttribute("id", "btnPreviewSwitch");
+	button.setAttribute("href", "javascript:void(0);");
+	button.setAttribute("style", "position: absolute; top: 35px; right: 10px; z-index: 101");
+	button.addEventListener("click", togglePreview, false);
+	document.body.appendChild(button);
+	
+	// Adding a event listener for the inplace search results to work fine
+	var search = document.getElementById("search");
+	if (search != null) {
+		search.addEventListener("DOMNodeInserted", togglePreview, false);
+	}
+	
+	// Disable it by default
+	togglePreview(null);
+}
+
+function togglePreview(event) {
 	var button = document.getElementById("btnPreviewSwitch");
-	if (button.innerHTML == "Disable Instant Previews") {
+	if (button == null)
+		return;
+	
+	if (event != null && event.type == "click") {
+		// Label needs to be changed only when user triggers it
+		if (button.innerHTML == "Disable Instant Previews")
+			button.innerHTML = "Enable Instant Previews";
+		else
+			button.innerHTML = "Disable Instant Previews";
+		GM_setValue("btnPreviewSwitch", button.innerHTML);
+	}
+	
+	if (button.innerHTML == "Enable Instant Previews") {
 		// Removing the preview box
 		var vspb = document.getElementById("vspb");
 		if (vspb != null) {
@@ -108,14 +194,6 @@ function togglePreview() {
 			if (vspib[i] != null) // too much defensive??
 				vspib[i].style.display = "none";
 		}
-		
-		// Disabling the JSONP callback method. 
-		if (unsafeWindow != null && unsafeWindow.google != null && unsafeWindow.google.vs != null) {
-			unsafeWindow.google.vs.r_original = unsafeWindow.google.vs.r;
-			unsafeWindow.google.vs.r = function(a) { /* do nothing  */ };
-		}
-		
-		button.innerHTML = "Enable Instant Previews";
 	} else {
 		// Showing the preview box
 		var vspb = document.getElementById("vspb");
@@ -129,15 +207,9 @@ function togglePreview() {
 			if (vspib[i] != null) // too much defensive??
 				vspib[i].style.display = "inline";
 		}
-		
-		// Enabling the JSONP calls
-		if (unsafeWindow != null && unsafeWindow.google != null && unsafeWindow.google.vs != null) {
-			unsafeWindow.google.vs.r = unsafeWindow.google.vs.r_original;
-		}
-		
-		button.innerHTML = "Disable Instant Previews";
 	}
 }
+
 function getElementByClass(theClass, ref) {
 	var allHTMLTags = ref.getElementsByTagName("*");
 
