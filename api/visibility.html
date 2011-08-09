@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+   var timer = 0;
+
+   function onLoad() {
+        timer = setInterval(updateClock, 1000);
+       if(document.addEventListener) {
+    	   document.addEventListener("visibilitychange", visibilityChanged);
+    	   document.addEventListener("webkitvisibilitychange", visibilityChanged);
+    	   document.addEventListener("msvisibilitychange", visibilityChanged);
+       }
+   }
+   
+   function isPageHidden(){
+	     return document.hidden || document.msHidden || document.webkitHidden;
+	 }
+
+   function visibilityChanged() {
+	   var msg = "";
+	   if (isPageHidden()) {
+		clearTimeout(timer);
+		msg = "Page is now hidden. Stopping the clock at " + new Date();
+	   } else {
+        timer = setInterval(updateClock, 1000);
+        msg = "Page is now visible. Starting the clock again at " + new Date();
+	   }
+	   
+	   document.getElementById("divMsg").innerHTML += msg + "<br/>";
+   }
+
+   function updateClock() { 
+       document.getElementById("divClock").innerHTML = "" + new Date();
+   }
+
+  </script>
+</head>
+<body onload="onLoad()">
+	<div id="divClock" style="position: fixed; right: 10px; top: 10px"></div>
+	<strong>Logs</strong>
+	<div id="divMsg"
+		style="position: fixed; left: 10px; right: 10px; top: 50px; height: 500px; border: 2px solid #AAA; background: rgba(229, 236, 249, 0.5); overflow: auto; padding: 5px;"></div>
+	(Related
+	<a href="" target="_blank">post</a> by
+	<a href="http://www.varunkumar.me" target="_blank">Varunkumar
+		Nagarajan</a>)
+</body>
+</html>
