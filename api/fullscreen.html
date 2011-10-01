@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function showFullScreen() {
+                try {
+                    document.getElementById('divTest').webkitRequestFullScreen();
+                } catch (e) {
+                    alert(e);
+                }
+            }
+        </script>
+    </head>
+    <body> 
+        <div id="divTest">Clicking on the button below will show this text in full screen. More details <a href="http://blog.varunkumar.me" target="_blank">here</a></div>
+        <button value="test" onclick="showFullScreen();">
+            Show Full Screen
+        </button>
+
+    </body>
+</html>
