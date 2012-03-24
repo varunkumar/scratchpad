@@ -770,7 +770,7 @@ var digitColors = ['265897', '265897', '265897', '',
   /**
     * Get the date we're counting down to.
     */
-  var countdownTo = new Date(2012, 0, 1, 0, 0, 0).getTime();
+  var countdownTo = new Date(2013, 0, 1, 0, 0, 0).getTime();
 
   /**
     * Buckets for the Digits.
