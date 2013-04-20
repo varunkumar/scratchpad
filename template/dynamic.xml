@@ -8,6 +8,9 @@
     <meta content='dynamic' name='blogger-template'/>
     <meta content='IE=9,chrome=1' http-equiv='X-UA-Compatible'/>
     <meta content='initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width' name='viewport'/>
+    <meta content='A technology blog on a wide array of topics including Android, Nexus, Google, Firefox plugins, web application development, GreaseMonkey, Social media, Twitter, etc' name='description'/>
+    <meta content='Android,Arduino,Raspberry Pi,How to,Tips,Google,GreaseMonkey,Galaxy Nexus,Technology News,Google,Web application development,Social Media,Twitter,India,Firefox plugins,HTML5,Chrome,JavaScript,NodeJS' name='keywords'/>
+    <meta content='Varunkumar Nagarajan' name='author'/>
     <b:skin><![CDATA[/*-----------------------------------------------
 Blogger Template Style
 Name: Dynamic Views
@@ -211,6 +214,10 @@ text-align: left;
     <script expr:src='data:blog.dynamicViewsScriptSrc + &quot;/js/gadgets.js&quot;' type='text/javascript'/>
     <script expr:src='data:blog.dynamicViewsCommentsSrc'/>
     <b:include data='blog' name='google-analytics'/>
+    <!-- VStart: Rupee & DESHack Logo CSS -->
+    <link href='http://static.varunkumar.me/static/rupee.css' rel='stylesheet' type='text/css'/>
+  <link href='http://deshack.varunkumar.me/stylesheets/logo.css' rel='stylesheet' type='text/css'/>
+    <!-- VStart: Rupee & DESHack Logo CSS -->
   </head>
   <body>
     <div class='content'>
@@ -1433,5 +1440,8 @@ head.appendChild(script);
         blogger.ui().configure().view();
       }, 1000); // VStart: Updated to one sec
     </script>
+    <!-- VStart: Script for DESHack Logo eye movement -->
+    <script src='http://deshack.varunkumar.me/javascripts/eye.js' type='text/javascript'/>
+    <!-- VEnd: Script for DESHack Logo eye movement -->
   </body>
 </html>
