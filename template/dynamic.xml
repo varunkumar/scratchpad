@@ -382,37 +382,23 @@ text-align: left;
   </span>
 </b:includable>
                             <b:includable id='comment_count_picker' var='post'>
-  <b:if cond='data:post.forceIframeComments'>
-    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-url='data:post.canonicalUrl'>
+  <b:if cond='data:post.commentSource == 1'>
+    <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
     </span>
   <b:else/>
-    <b:if cond='data:post.commentSource == 1'>
-      <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-url='data:post.canonicalUrl'>
-      </span>
-    <b:else/>
-      <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-        <data:post.commentLabelFull/>:
-      </a>
-    </b:if>
+    <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+      <data:post.commentLabelFull/>:
+    </a>
   </b:if>
 </b:includable>
                             <b:includable id='comment_picker' var='post'>
-  <b:if cond='data:post.forceIframeComments'>
+  <b:if cond='data:post.commentSource == 1'>
     <b:include data='post' name='iframe_comments'/>
+  <b:else/>
     <b:if cond='data:post.showThreadedComments'>
       <b:include data='post' name='threaded_comments'/>
     <b:else/>
       <b:include data='post' name='comments'/>
-    </b:if>
-  <b:else/>
-    <b:if cond='data:post.commentSource == 1'>
-      <b:include data='post' name='iframe_comments'/>
-    <b:else/>
-      <b:if cond='data:post.showThreadedComments'>
-        <b:include data='post' name='threaded_comments'/>
-      <b:else/>
-        <b:include data='post' name='comments'/>
-      </b:if>
     </b:if>
   </b:if>
 </b:includable>
@@ -913,7 +899,7 @@ text-align: left;
   </b:if>
 </b:includable>
                             <b:includable id='shareButtons' var='post'>
-  <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showOrkutButton'><a class='goog-inline-block share-button sb-orkut' expr:href='data:post.sharePostUrl + &quot;&amp;target=orkut&quot;' expr:title='data:top.shareToOrkutMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToOrkutMsg/></span></a></b:if><b:if cond='data:top.showDummy'><div class='goog-inline-block dummy-container'><data:post.dummyTag/></div></b:if>
+  <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showOrkutButton'><a class='goog-inline-block share-button sb-orkut' expr:href='data:post.sharePostUrl + &quot;&amp;target=orkut&quot;' expr:title='data:top.shareToOrkutMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToOrkutMsg/></span></a></b:if><b:if cond='data:top.showPinterestButton'><a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToPinterestMsg/></span></a></b:if><b:if cond='data:top.showDummy'><div class='goog-inline-block dummy-container'><data:post.dummyTag/></div></b:if>
 </b:includable>
                             <b:includable id='status-message'>
   <b:if cond='data:navMessage'>
@@ -1178,19 +1164,95 @@ text-align: left;
                       <div class='column-right-inner'>
                         <aside>
                           <b:section class='sidebar' id='sidebar-right-1' preferred='yes' showaddelement='yes'>
-                            <b:widget id='PlusFollowers1' locked='false' title='Google+ Followers' type='PlusFollowers'>
+                            <b:widget id='Subscribe1' locked='false' title='Subscribe' type='Subscribe'>
                               <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <b:if cond='data:profileUrl != &quot;&quot;'>
-      <div class='g-plus' data-action='followers' data-source='blogger:blog:followers' expr:data-height='data:height' expr:data-href='data:profileUrl' expr:data-theme='data:theme' expr:data-width='data:width'/>
-      <script type='text/javascript'>
-        window.___gcfg = {&#39;lang&#39;: &#39;<data:language/>&#39;};
-      </script>
+  <b:if cond='data:isPublic'>
+  <div style='white-space:nowrap'>
+
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2 class='title'><data:title/></h2>
     </b:if>
+  <div class='widget-content'>
+    <b:loop values='data:feeds' var='feed'>
+        <div expr:class='&quot;subscribe-wrapper subscribe-type-&quot; + data:feed.type'>
+
+
+        <div expr:class='&quot;subscribe expanded subscribe-type-&quot; + data:feed.type' expr:id='&quot;SW_READER_LIST_&quot; + data:widgetId + data:feed.type' style='display:none;'>
+
+          <div class='top'>
+            <span class='inner' expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
+              <img class='subscribe-dropdown-arrow' expr:src='data:arrowDropdownImg'/>
+              <img align='absmiddle' alt='' border='0' class='feed-icon' expr:src='data:feedIconImg'/>
+              <data:feed.title/>
+            </span>
+
+            <div class='feed-reader-links'>
+              <a class='feed-reader-link' expr:href='&quot;http://www.netvibes.com/subscribe.php?url=&quot; + data:feed.encodedUrl' target='_blank'>
+                <img expr:src='data:imagePathBase + &quot;subscribe-netvibes.png&quot;'/>
+              </a>
+              <a class='feed-reader-link' expr:href='&quot;http://add.my.yahoo.com/content?url=&quot; + data:feed.encodedUrl' target='_blank'>
+                <img expr:src='data:imagePathBase + &quot;subscribe-yahoo.png&quot;'/>
+              </a>
+              <a class='feed-reader-link' expr:href='data:feed.url' target='_blank'>
+                <img align='absmiddle' class='feed-icon' expr:src='data:feedIconImg'/>
+                Atom
+              </a>
+            </div>
+
+          </div>
+          <div class='bottom'/>
+        </div>
+
+        <div class='subscribe' expr:id='&quot;SW_READER_LIST_CLOSED_&quot; + data:widgetId +data:feed.type' expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
+          <div class='top'>
+             <span class='inner'>
+               <img class='subscribe-dropdown-arrow' expr:src='data:arrowDropdownImg'/>
+               <span expr:onclick='&quot;return(_SW_toggleReaderList(event, \&quot;&quot; + data:widgetId +data:feed.type + &quot;\&quot;));&quot;'>
+                 <img align='absmiddle' alt='' border='0' class='feed-icon' expr:src='data:feedIconImg'/>
+                 <data:feed.title/>
+               </span>
+             </span>
+           </div>
+          <div class='bottom'/>
+        </div>
+
+      </div>
+    </b:loop>
+
+    <div style='clear:both'/>
+
   </div>
+  </div>
+
+  <b:include name='quickedit'/>
+
+ </b:if>
+</b:includable>
+                            </b:widget>
+                            <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
+                              <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <div class='follow-by-email-inner'>
+      <form action='http://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;http://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+        <table width='100%'>
+          <tr>
+            <td>
+              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+            </td>
+            <td width='64px'>
+              <input class='follow-by-email-submit' type='submit' value='Submit'/>
+            </td>
+          </tr>
+        </table>
+        <input expr:value='data:feedPath' name='uri' type='hidden'/>
+        <input name='loc' type='hidden' value='en_US'/>
+      </form>
+    </div>
+  </div>
+  <span class='item-control blog-admin'>
+    <b:include name='quickedit'/>
+  </span>
 </b:includable>
                             </b:widget>
                             <b:widget id='Translate1' locked='false' title='Translate' type='Translate'>
@@ -1261,16 +1323,6 @@ text-align: left;
       </li>
       </b:loop>
     </ul>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-                            </b:widget>
-                            <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-                              <b:includable id='main'>
-  <div class='widget-content'>
-    <b:if cond='data:blog.disableAdSenseWidget != &quot;true&quot;'>
-      <data:adCode/>
-    </b:if>
     <b:include name='quickedit'/>
   </div>
 </b:includable>
@@ -1358,30 +1410,37 @@ text-align: left;
  </b:if>
 </b:includable>
                             </b:widget>
-                            <b:widget id='HTML4' locked='false' title='Subscribe via mail' type='HTML'>
+                            <b:widget id='PlusOne1' locked='false' title='+1 Button' type='PlusOne'>
                               <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
+
   <div class='widget-content'>
-    <data:content/>
+    <g:plusone expr:annotation='data:annotation' expr:href='data:blog.canonicalHomepageUrl' expr:size='data:size' source='blogger:blog:plusone' width='250'/>
+
+    <script type='text/javascript'>
+      window.___gcfg = {&quot;lang&quot;: &quot;<data:language/>&quot;};
+    </script>
   </div>
 
-  <b:include name='quickedit'/>
 </b:includable>
                             </b:widget>
-                            <b:widget id='HTML1' locked='false' title='Visitors' type='HTML'>
+                            <b:widget id='Stats1' locked='false' title='PageViews' type='Stats'>
                               <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
+  <b:if cond='data:title'><h2><data:title/></h2></b:if>
   <div class='widget-content'>
-    <data:content/>
+    <!-- Content is going to be visible when data will be fetched from server. -->
+    <div expr:id='data:widget.instanceId + &quot;_content&quot;' style='display: none;'>
+      <!-- Counter and image will be injected later via AJAX call. -->
+      <b:if cond='data:showSparkline'>
+        <img alt='Sparkline' expr:id='data:widget.instanceId + &quot;_sparkline&quot;' height='30' width='75'/>
+      </b:if>
+      <b:if cond='data:showGraphicalCounter'>
+        <span class='counter-wrapper graph-counter-wrapper' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/>
+      <b:else/>
+        <span class='counter-wrapper text-counter-wrapper' expr:id='data:widget.instanceId + &quot;_totalCount&quot;'/>
+      </b:if>
+      <b:include name='quickedit'/>
+    </div>
   </div>
-
-  <b:include name='quickedit'/>
 </b:includable>
                             </b:widget>
                             <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar'>
@@ -1398,16 +1457,13 @@ text-align: left;
 &lt;div id=&quot;navbar-iframe-container&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
-        gapi.load(&quot;iframes-styles-bubble&quot;, function() {
-          if (window.iframes &amp;&amp; iframes.open) {
-            iframes.open(
-                &#39;//draft.blogger.com/navbar.g?targetBlogID\0752950942336441072027\46blogName\75Varun\47s+ScratchPad\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75http://blog.varunkumar.me/search\46blogLocale\75en_US\46v\0752\46homepageUrl\75http://blog.varunkumar.me/\46vt\75-2074218082807534234&#39;,
-                {
-                  container: &quot;navbar-iframe-container&quot;,
-                  id: &quot;navbar-iframe&quot;
-                },
-                {
-                });
+        gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
+          if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
+            gapi.iframes.getContext().openChild({
+                url: &#39;https://draft.blogger.com/navbar.g?targetBlogID\0752950942336441072027\46blogName\75Varun\47s+ScratchPad\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75http://blog.varunkumar.me/search\46blogLocale\75en\46v\0752\46homepageUrl\75http://blog.varunkumar.me/\46blogFollowUrl\75https://plus.google.com/105729700376962347130\46vt\75-2074218082807534234&#39;,
+                where: document.getElementById(&quot;navbar-iframe-container&quot;),
+                id: &quot;navbar-iframe&quot;
+            });
           }
         });
       &lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;
